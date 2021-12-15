@@ -28,6 +28,14 @@ public class PasswordEncodingTests {
     }
 
     @Test
+    void testBcrypt15() {
+        PasswordEncoder bcrypt = new BCryptPasswordEncoder(15);
+
+        System.out.println(bcrypt.encode("tiger"));
+
+    }
+
+    @Test
     void testSha256() {
         PasswordEncoder sha256 = new StandardPasswordEncoder();
 
