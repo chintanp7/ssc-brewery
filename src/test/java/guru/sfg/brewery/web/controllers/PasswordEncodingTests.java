@@ -26,7 +26,6 @@ public class PasswordEncodingTests {
         System.out.println(bcrypt.encode(PASSWORD));
         System.out.println(bcrypt.encode(PASSWORD));
         System.out.println(bcrypt.encode("tiger"));
-
     }
 
     @Test
@@ -36,7 +35,7 @@ public class PasswordEncodingTests {
         System.out.println(bcrypt.encode(PASSWORD));
         System.out.println(bcrypt.encode(PASSWORD));
         System.out.println(bcrypt.encode("guru"));
-
+        assertTrue(bcrypt.matches(PASSWORD, "$2a$10$Ihn1b1UFnnecCCykZQYcn.4.0MY3axpQmr2wtsUqxn1VKyTCEKz9e"));
     }
 
     @Test
